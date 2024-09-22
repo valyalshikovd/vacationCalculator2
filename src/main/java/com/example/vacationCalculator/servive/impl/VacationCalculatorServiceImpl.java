@@ -26,7 +26,11 @@ public class VacationCalculatorServiceImpl implements VacationCalculatorService 
         return getSalary(dayService.getAmountWorkDay(dateParseService.parseDate(date), amountDay), averageSalary);
     }
 
-
+    /**
+     * Метод, расчитывающий зарплату
+     * @param countDays - число рабочих дней
+     * @param averageSalary - средняя зарплата в месяц
+     */
     private Double getSalary(int countDays, Double averageSalary) {
         if(countDays <= 0) {
             throw new IllegalArgumentException("Некорректное число дней для расчета");

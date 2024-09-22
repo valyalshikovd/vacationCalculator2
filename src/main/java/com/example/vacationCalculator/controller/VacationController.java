@@ -20,6 +20,13 @@ public class VacationController {
 
     private final VacationCalculatorService vacationCalculatorService;
 
+    /**
+     * Основной контроллер для расчета зарплаты
+     * @param averageSalary -  средняя зарплата за месяц
+     * @param amountDay - число дней отпуска
+     * @param date - последний рабочий день перед отпуском
+     * @return
+     */
     @GetMapping("/calculate")
     public ResponseEntity<Double> calculate(
             @RequestParam Double averageSalary,
